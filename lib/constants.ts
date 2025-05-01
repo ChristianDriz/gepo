@@ -81,30 +81,30 @@ export const Timeline = [
         date: 'October 23, 1989',
         icon: 'healthicons:baby-0306m-outline' ,
         title: 'Birth in Balanga',
-        description: 'Balanga City, Bataan',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
         date: 'October 23, 1989',
         icon: 'healthicons:death-alt2-outline' ,
         title: 'Birth in Balanga',
-        description: 'Balanga City, Bataan',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
         date: 'October 23, 1989',
         icon: 'healthicons:death-alt2-outline' ,
         title: 'Birth in Balanga',
-        description: 'Balanga City, Bataan',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.n',
     },
     {
         date: 'October 23, 1989',
         icon: 'healthicons:death-alt2-outline' ,
         title: 'Birth in Balanga',
-        description: 'Balanga City, Bataan',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     },
     {
         date: 'April 02, 2025',
         icon: 'healthicons:death-alt2-outline',
         title: 'Passed away',
-        description: 'Balanga City, Bataan',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     }
 ]
