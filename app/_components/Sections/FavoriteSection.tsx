@@ -1,12 +1,21 @@
-import { FavoritesProp } from "@/lib/queries";
+import { FavoritesProp } from "@/lib/interfaces";
+import Card from "../ui/card";
 
-export default function FavoriteSection({ favorites } : { favorites: FavoritesProp[] }) {
+export default function FavoriteSection({ favorites, id } : FavoritesProp ) {
+    
     return (
-        <section
-            id={favorites[0].slug}
-            className="max-w-7xl mx-auto"
-        >
-            FavoriteSection
+        <section className="max-w-7xl mx-auto px-4 mt-16" id={id}>
+            <h2 className="mb-4 capitalize">{id}</h2>
+            <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {favorites.map((favorite, index) => (
+                    <li key={index}>
+                        <Card     
+                            title={favorite.title} 
+                            content={favorite.content}
+                        />
+                    </li>
+                ))} 
+            </ol> 
         </section>
     )
 }

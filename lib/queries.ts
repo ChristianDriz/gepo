@@ -1,4 +1,5 @@
 import { gql, GraphQLClient } from 'graphql-request'
+import { DataProp } from './interfaces';
 
 const client = new GraphQLClient(process.env.NEXT_HYGRAPH_API!, {
     headers: {
@@ -6,24 +7,8 @@ const client = new GraphQLClient(process.env.NEXT_HYGRAPH_API!, {
     },
 });
 
-interface PersonProp {
-    fullName: string;
-    birthDate: Date;
-    deathDate: Date;
-    placeOfBirth: string;
-    profilePhoto: {
-        url: string;
-    }
-    backgroundPhoto: {
-        url: string;
-    }
-}
 
-export interface PersonalInfo {
-    personalInfos: PersonProp[]
-}
-
-export async function getPersonalInfo(): Promise<PersonalInfo> {
+export async function getData(): Promise<DataProp> {
     const query = gql`
         query MyQuery {
             personalInfos {
@@ -38,63 +23,35 @@ export async function getPersonalInfo(): Promise<PersonalInfo> {
                     url
                 }
             }
-        }`;
-    return await client.request<PersonalInfo>(query);
-}
-
-export interface ObituaryProp {
-    slug: string;
-    obituaryDetails: {
-        html: string;
-    }
-}
-
-export interface FavoritesProp {
-    slug: string;
-}
-
-export interface TimelineProp {
-    slug: string;
-}
-
-export interface GalleryProp {
-    slug: string;
-}
-
-export interface FamilyTreeProp {
-    slug: string;
-}
-
-export interface DataProp {
-    obituaries: ObituaryProp[];
-    favorites: FavoritesProp[];
-    timelines: TimelineProp[];
-    galleries: GalleryProp[];
-    familyTrees: FamilyTreeProp[];
-}
-
-export async function getData(): Promise<DataProp> {
-    const query = gql`
-        query MyQuery {
             obituaries {
-                slug
                 obituaryDetails {
                     html
                 }
             }
-            favorites {
-                slug
-            }
-            timelines {
-                slug
-            }
             galleries {
-                slug
+                category
+                images {
+                    url
+                }
             }
-            familyTrees {
-                slug
+            familyTrees(where: {id: "cm9pmhdxb2tii07obrc8ek0sn"}) {
+                name
+                spouse {
+                    name
+                }
+                children {
+                    name
+                    spouse {
+                        name
+                    }
+                    children {
+                        name
+                    }
+                }
             }
         }`;
     return await client.request<DataProp>(query);
 }
+
+
     

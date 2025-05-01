@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Merriweather, Quicksand } from 'next/font/google';
+import { Cormorant , Quicksand } from 'next/font/google';
 import "./globals.css";
+import DesktopNav from "./_components/Navigation/DesktopNav";
+import MobileNav from "./_components/Navigation/MobileNav";
+import { Navigation } from '../lib/constants'
 
-const merriweather = Merriweather({
-    weight: ['400', '700', '900'], 
+const cormorant = Cormorant({
+    weight: ['400', '500', '600', '700'], 
     subsets: ['latin'],
     display: 'swap',
 })
@@ -26,8 +29,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" >
-            <body className={`${merriweather.className} ${quicksand.className} antialiased`}>
-                <main className="scroll-smooth">
+            <body className={`${cormorant.className} ${quicksand.className} antialiased relative`}>                
+                <DesktopNav navlinks={Navigation}/>
+                <MobileNav navlinks={Navigation}/> 
+                <main className="relative">
                     {children}
                 </main>
             </body>
