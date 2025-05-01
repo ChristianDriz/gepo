@@ -1,18 +1,17 @@
 
-// import { getData } from '../lib/queries'
-// import FamilyTreeSection from './_components/Sections/FamilyTreeSection';
+import { getData } from '../lib/queries'
+import { Navigation, PersonalInfo, Obituary, Favorites, Timeline, FamilyTree } from '../lib/constants'
 import FavoriteSection from './_components/Sections/FavoriteSection';
-// import GallerySection from './_components/Sections/GallerySection';
+import GallerySection from './_components/Sections/GallerySection';
 import ObituarySection from './_components/Sections/ObituarySection';
 import PersonalInfoSection from './_components/Sections/PersonalInfoSection';
 import TimelineSection from './_components/Sections/TimelineSection';
-import { Navigation, PersonalInfo, Obituary, Favorites, Timeline } from '../lib/constants'
+import FamilyTreeSection from './_components/Sections/FamilyTreeSection';
+
 
 export default async function Home() {
     
-    // const { personalInfos, familyTrees } = await getData();
-
-    // console.log(Navigation);
+    const { galleries } = await getData();
 
     return (
         <>
@@ -20,9 +19,8 @@ export default async function Home() {
             <ObituarySection obituary={Obituary} id={Navigation[1].link} />
             <FavoriteSection favorites={Favorites} id={Navigation[2].link} /> 
             <TimelineSection timeline={Timeline} id={Navigation[3].link}/>
-            {/* <GallerySection categories={Category}/>
-            <FamilyTreeSection familyTrees={familyTrees}/> */}
-            
+            <GallerySection galleries={galleries} id={Navigation[4].link}/>
+            <FamilyTreeSection familyTree={FamilyTree} id={Navigation[5].link}/>   
         </>
     );
 }

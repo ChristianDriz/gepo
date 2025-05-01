@@ -8,6 +8,7 @@
     --subtle-background: #FFFFFF;
     --muted-text: #5E5E5E;
     --border-subtle: #EFEFEF;
+    --red: #F87171;
 }
   
 @media (prefers-color-scheme: dark) {

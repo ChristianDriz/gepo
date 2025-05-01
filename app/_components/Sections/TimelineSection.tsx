@@ -4,7 +4,7 @@ import { TimelineProp } from "@/lib/interfaces";
 export default function TimelineSection({ timeline, id } : TimelineProp ) {
 
     return (
-        <section className="max-w-7xl mx-auto px-4 mt-16 h-screen  " id={id}>
+        <section className="max-w-7xl mx-auto px-4 mt-16 " id={id}>
             <h2 className="capitalize mb-10 ">{id}</h2>
             <div className="flex flex-col sm:items-center relative mt-6">
                 <ul className="sm:w-[70%] ml-10 sm:ml-0 before:content-[''] before:absolute before:top-0 before:left-4 sm:before:left-[50%] before:w-0.5 before:h-full before:bg-gray-300 ">
@@ -21,8 +21,8 @@ export default function TimelineSection({ timeline, id } : TimelineProp ) {
                         >   
                             <p className="w-32 hidden sm:block text-sm mb-2">{data.date}</p>
                             <div className={` 
-                                rounded-2xl rounded-tl-none mb-4 px-6 py-4 bg-[var(--subtle-background)] 
-                                ${isLast ? 'sm:mb-0' : 'sm:mb-10'}
+                                rounded-2xl rounded-tl-none px-6 py-4 bg-[var(--subtle-background)] 
+                                ${isLast ? 'mb-0' : 'mb-4 sm:mb-10'}
                                 ${isOdd ? 'sm:rounded-tr-none sm:rounded-tl-2xl' : 'sm:rounded-tl-none sm:rounded-tr-2xl'}`}
                             >
                                 <p className="w-32 sm:hidden text-sm  ">{data.date}</p>

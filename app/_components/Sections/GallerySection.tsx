@@ -1,48 +1,56 @@
 "use client"
 
-import { CategoryProp } from "@/lib/interfaces";
-// import Image from "next/image";
+import { GalleryProp } from "@/lib/interfaces";
 import { useState } from "react";
+import { PhotoProvider, PhotoView } from "react-photo-view";
+import 'react-photo-view/dist/react-photo-view.css';
+import Image from "next/image";
 
-export default function GallerySection({ categories } : CategoryProp ) {
+export default function GallerySection({ galleries, id } : GalleryProp ) {
 
+    const categories = ["all", ...new Set(galleries.map(item => item.category))];
+    const [selectedCategory, setSelectedCategory] = useState('all');
 
-    // const allImageUrls = galleries.flatMap(gallery =>
-    //     gallery.galleryComponent.images.map(image => image.url)
-    // );
+    const filteredImages = selectedCategory === 'all' ? 
+        galleries : galleries.filter(item => item.category === selectedCategory);
 
-    // const categories = ["all", ...new Set(galleries.map(item => item.category))];
-
-    const [selectedCategory, setSelectedCategory] = useState('portraits');
-    console.log(selectedCategory);
+    const images = filteredImages.flatMap(item => item.images.map(image => image.url));
 
     return (
-        <section id="gallery" className="max-w-7xl mx-auto my-10 p-3 md:p-4">
-            <h2 className="text-2xl font-bold">Gallery</h2>
-            <ul className="flex gap-2 mt-2 mb-4">
-                {categories.map((category, index) => (
-                <li key={index}>
-                    <button
-                        onClick={() => setSelectedCategory(category)} 
-                        className="px-4 py-2 rounded shadow-xl cursor-pointer capitalize text-black/70">
-                            {category}
-                    </button>
-                </li>
-                ))}
-                
-            </ul>
-            <div className="flex flex-wrap gap-2">
-            {/* {allImageUrls.map((url, index) => (
-                <Image 
-                    key={index}
-                    src={url}
-                    alt={`img-${index}`}
-                    width={450}
-                    height={450}
-                    className=" h-full rounded object-cover grow"
-                />
-            ))} */}
+        <section id={id} className="max-w-7xl mx-auto my-10 p-3 md:p-4">
+            <h2 className="mb-4 capitalize">{id}</h2>
+            <div className="flex items-center justify-start mb-4">
+                <ul className="flex items-center justify-center bg-[var(--subtle-background)] p-2 rounded-xl overflow-auto">
+                    {categories.map((category, index) => (
+                    <li key={index}>
+                        <button
+                            onClick={() => setSelectedCategory(category)} 
+                            className={`
+                                capitalize px-4 py-2 rounded-lg text-sm cursor-pointer
+                                ${selectedCategory === category ? 'bg-[var(--red)] text-white font-medium' : 'text-[var(--muted-text)] '}`}
+                            >
+                                {category}
+                        </button>
+                    </li>
+                    ))}
+                    
+                </ul>
             </div>
+            <PhotoProvider >
+                <div className="grid grid-cols-2 gap-2 md:grid-cols-3 cursor-pointer">
+                    {images.map((url, index) => (
+                    <PhotoView key={url} src={url}>
+                        <Image 
+                            src={url}
+                            alt={`img-${index}`}
+                            width={450}
+                            height={450}
+                            className="h-full rounded-md object-cover "
+                        />
+                    </PhotoView>
+                    ))}
+                </div>
+            </PhotoProvider>
         </section>
     )
 }

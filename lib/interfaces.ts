@@ -45,39 +45,34 @@ export interface TimelineProp {
     }[]
 }
 
-export interface GalleryProp {    
+export interface GalleryItemProp {
     category: string;
     images: {
         url: string;
     }[]
 }
 
-export interface FamilyTreeProp {
+export interface GalleryProp {    
+    id: string;
+    galleries: GalleryItemProp[];
+}
+
+export interface PersonProp {
     name: string;
-    spouse: {
-        name: string;
-    }[];
-    children: {
-        name: string;
-        spouse: {
-            name: string;
-        }[];
-        children: {
-            name: string;
-        }[];
-    }[];
+    gender: string;
+    role: string;
+    birthdate: string;
+    deathdate?: string;
+    status: string;
+    spouse?: PersonProp;
+    children?: PersonProp[];
+    profile_photo?: string;
 }
 
-export interface DataProp {
-    personalInfos: PersonalInfoProp[];
-    navigations: NavigationProp[];
-    obituaries: ObituaryProp[];
-    favorites: FavoritesProp[];
-    // timelines: TimelineProp[];
-    galleries: GalleryProp[];
-    familyTrees: FamilyTreeProp[];
+export interface FamilyTreeProp {
+    id: string;
+    familyTree: PersonProp[];
 }
 
-export interface CategoryProp {
-    categories: string[];
-}
+
+

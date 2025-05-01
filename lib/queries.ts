@@ -1,5 +1,5 @@
 import { gql, GraphQLClient } from 'graphql-request'
-import { DataProp } from './interfaces';
+import { GalleryProp } from './interfaces';
 
 const client = new GraphQLClient(process.env.NEXT_HYGRAPH_API!, {
     headers: {
@@ -7,50 +7,17 @@ const client = new GraphQLClient(process.env.NEXT_HYGRAPH_API!, {
     },
 });
 
-
-export async function getData(): Promise<DataProp> {
+export async function getData(): Promise<GalleryProp> {
     const query = gql`
         query MyQuery {
-            personalInfos {
-                fullName
-                birthDate
-                deathDate
-                placeOfBirth
-                profilePhoto {
-                    url
-                }
-                backgroundPhoto {
-                    url
-                }
-            }
-            obituaries {
-                obituaryDetails {
-                    html
-                }
-            }
             galleries {
                 category
                 images {
                     url
                 }
             }
-            familyTrees(where: {id: "cm9pmhdxb2tii07obrc8ek0sn"}) {
-                name
-                spouse {
-                    name
-                }
-                children {
-                    name
-                    spouse {
-                        name
-                    }
-                    children {
-                        name
-                    }
-                }
-            }
         }`;
-    return await client.request<DataProp>(query);
+    return await client.request<GalleryProp>(query);
 }
 
 

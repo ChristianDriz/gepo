@@ -23,11 +23,7 @@ export const Navigation = [
         link: 'family tree', 
         icon: 'fluent:list-bar-tree-offset-20-regular'
     },
-];
-
-export const Category = [
-    'portraits', 'family', 'friends'
-];
+]
 
 export const PersonalInfo = {
     background: '/images/background_cropped.jpg',
@@ -37,7 +33,6 @@ export const PersonalInfo = {
     deathDate: 'April 2, 2025',
     placeOfBirth: 'Balanga City, Bataan',
 }  
-
 
 export const Obituary = [
     `Michael Angelo left us too soon on April 2, 2025, at the age of 35. Born on October 23, 1989, he was a cherished brother, a loyal friend, and a kind soul whose warmth and laughter brought light to those around him.
@@ -106,5 +101,233 @@ export const Timeline = [
         icon: 'healthicons:death-alt2-outline',
         title: 'Passed away',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    }
+]
+
+export const FamilyTree = [
+    {
+        name: 'Rolando Dimla',
+        gender: 'male',
+        role: 'parents',
+        birthdate: '10-9-1956',
+        deathdate: '',
+        status: 'alive',
+        spouse:     
+        {
+            name: 'Agnes D. Dimla',
+            gender: 'female',
+            role: 'parents',
+            birthdate: '11-21-1962',
+            deathdate: '',
+            status: 'alive',
+            spouse: undefined,
+            children: [
+                
+            ],
+            profile_photo: '',
+        },
+        children: [
+            {
+                name: 'Allan D. Dimla',
+                gender: 'male',
+                role: 'child',
+                birthdate: '6-29-1984',
+                deathdate: '',
+                status: 'alive',
+                spouse:                    {
+                    name: 'Liezel M. Dimla',
+                    gender: 'female',
+                    role: 'child',
+                    birthdate: '12-15-1987',
+                    deathdate: '',
+                    status: 'alive',
+                    spouse: undefined,
+                    children: [],
+                    profile_photo: '',
+                },
+                children: [
+                    {
+                        name: 'Carla Alieza M. Dimla',
+                        gender: 'female',
+                        role: 'grandchild',
+                        birthdate: '1-17-2010',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    },
+                    {
+                        name: 'Alliana Samantha M. Dimla',
+                        gender: 'female',
+                        role: 'grandchild',
+                        birthdate: '10-28-2012',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    },
+                    {
+                        name: 'Allen Jaziel M. Dimla',
+                        gender: 'female',
+                        role: 'grandchild',
+                        birthdate: '5-17-2022',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    }
+                ],
+                profile_photo: '',
+            },
+            {
+                name: 'Anna Kristina D. Dimla',
+                gender: 'female',
+                role: 'child',
+                birthdate: '9-11-1985',
+                deathdate: '',
+                status: 'alive',
+                spouse:             
+                {
+                    name: 'Virgilio Paterno',
+                    gender: 'male',
+                    role: 'child',
+                    birthdate: '2-3-1967',
+                    deathdate: '',
+                    status: 'alive',
+                    spouse: undefined,
+                    children: [],
+                    profile_photo: '',
+                },
+                children: [],
+                profile_photo: '',
+            },
+            {
+                name: 'Anna Lea D. Dumenden',
+                gender: 'female',
+                role: 'child',
+                birthdate: '7-23-1987',
+                deathdate: '',
+                status: 'alive',
+                spouse: 
+                {
+                    name: 'Aristedes C. Dumenden',
+                    gender: 'male',
+                    role: 'child',
+                    birthdate: '1-6-1962',
+                    deathdate: '',
+                    status: 'alive',
+                    spouse: undefined,
+                    children: [],
+                    profile_photo: '',
+                },
+                children: [
+                    {
+                        name: 'Aerish Nicole D. Dumenden',
+                        gender: 'female',
+                        role: 'grandchild',
+                        birthdate: '7-21-2009',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    },
+                    {
+                        name: 'Aerosh Prince D. Dumenden',
+                        gender: 'male',
+                        role: 'grandchild',
+                        birthdate: '6-27-2015',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    },
+                ],
+                profile_photo: '',
+            },
+            {
+                name: 'Michael Angelo D. Dimla',
+                gender: 'male',
+                role: 'child',
+                birthdate: '10-23-1989',
+                deathdate: '4-2-2025',
+                status: 'deceased',
+                spouse: undefined,
+                children: [],
+                profile_photo: '',
+            },
+            {
+                name: 'Rolando D. Dimla Jr.',
+                gender: 'male',
+                role: 'child',
+                birthdate: '12-17-1993',
+                deathdate: '',
+                status: 'alive',
+                spouse: 
+                {
+                    name: 'Kherlinn B. Almirañez',
+                    gender: 'female',
+                    role: 'child',
+                    birthdate: '5-31-1997',
+                    deathdate: '',
+                    status: 'alive',
+                    spouse: undefined,
+                    children: [],
+                    profile_photo: '',
+                },
+                children: [
+                    {
+                        name: 'Reign Kherstof A. Dimla',
+                        gender: 'male',
+                        role: 'grandchild',
+                        birthdate: '10-10-2014',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    },
+                    {
+                        name: 'Reign Kherstin A. Dimla',
+                        gender: 'female',
+                        role: 'grandchild',
+                        birthdate: '11-18-2022',
+                        deathdate: '',
+                        status: 'alive',
+                        spouse: undefined,
+                        children: [],
+                        profile_photo: '',
+                    },
+                ],
+                profile_photo: '',
+            },
+            {
+                name: 'Anna Patricia Angela D. Dimla',
+                gender: 'female',
+                role: 'child',
+                birthdate: '9-11-1999',
+                deathdate: '',
+                status: 'alive',
+                spouse: undefined,
+                children: [],
+                profile_photo: '',
+            },
+            {
+                name: 'Christian Joseph D. Dimla',
+                gender: 'male',
+                role: 'child',
+                birthdate: '12-27-2000',
+                deathdate: '',
+                status: 'alive',
+                spouse: undefined,
+                children: [],
+                profile_photo: '',
+            },
+        ],
+        profile_photo: '',
     }
 ]
