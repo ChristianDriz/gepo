@@ -14,7 +14,7 @@ export default function GallerySection({ categories } : CategoryProp ) {
     // const categories = ["all", ...new Set(galleries.map(item => item.category))];
 
     const [selectedCategory, setSelectedCategory] = useState('portraits');
-    // console.log(selectedCategory);
+    console.log(selectedCategory);
 
     return (
         <section id="gallery" className="max-w-7xl mx-auto my-10 p-3 md:p-4">
