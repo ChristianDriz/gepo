@@ -63,7 +63,7 @@ export interface PersonProp {
     role: string;
     birthdate: string;
     deathdate?: string;
-    status: string;
+    isAlive: boolean;
     spouse?: PersonProp;
     children?: PersonProp[];
     profile_photo?: string;
