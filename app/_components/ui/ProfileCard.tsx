@@ -1,23 +1,29 @@
 import { PersonProp } from "@/lib/interfaces";
 import Image from "next/image";
 
+export default function ProfileCard({ name, gender, birthdate, role, isAlive, profile_photo, } : PersonProp  ) {
 
-
-export default function ProfileCard({ name, role, isAlive, profile_photo, } : PersonProp  ) {
-
+    // const todate = new Date();
+    // const age = todate.toLocaleDateString() - birthdate;
+    
     return (
         <article 
-            className={`bg-[var(--subtle-background)] rounded-lg px-3 py-4 w-32 flex flex-col justify-center items-center gap-2 relative  
-                ${(role === "child" || role === "grandchild") ? "before:content-[''] before:absolute before:-top-10 before:w-px before:h-10 before:bg-gray-300" : ""}`
+            className={`relative rounded-lg flex gap-2 bg-[var(--subtle-background)] p-3 
+                ${(role === "child" || role === "grandchild") ? "before:content-[''] before:absolute before:-left-8 before:top-1/2 before:h-px before:w-8 before:bg-gray-300" : ""}`
             }>
-            <Image 
-                src={profile_photo || '/asd.png'}
-                alt={''}
-                width='200'
-                height='400'
-                className={`rounded-full w-20 h-20 object-cover border border-[var(--border-subtle)] ${!isAlive ? 'grayscale-50' : ''}`}
-            />
-            <p className="text-sm/4 text-center tracking-tight min-h-8">{name}</p>
+            <div className="w-20 h-20 rounded-full border border-[var(--border-subtle)]">
+                <Image 
+                    src={`${ profile_photo ? profile_photo : `${gender === 'male' ? '/images/default-male-img.png' : '/images/default-female-img.png'}` }`}
+                    alt={''}
+                    width='80'
+                    height='80'
+                    className={`rounded-full w-full h-full object-cover ${!isAlive ? 'grayscale-50' : ''}`}
+                />
+            </div>
+            <div className="flex flex-col gap-1.5 flex-1 w-32 text-left text-[var(--muted-text)] tracking-tight ">
+                <h4 className="text-base/4 font-medium">{name}</h4>
+                <p className="text-sm/3.5">{birthdate} </p>
+            </div>
         </article>
     )
 }

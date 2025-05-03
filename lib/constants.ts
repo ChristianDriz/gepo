@@ -155,7 +155,7 @@ export const FamilyTree = [
                         isAlive: true,
                         spouse: undefined,
                         children: [],
-                        profile_photo: '',
+                        profile_photo: '/images/carla.jpg',
                     },
                     {
                         name: 'Alliana Samantha M. Dimla',
@@ -177,7 +177,7 @@ export const FamilyTree = [
                         isAlive: true,
                         spouse: undefined,
                         children: [],
-                        profile_photo: '',
+                        profile_photo: '/images/aj.jpg',
                     }
                 ],
                 profile_photo: '/images/allan.jpg',
@@ -277,7 +277,7 @@ export const FamilyTree = [
                     isAlive: true,
                     spouse: undefined,
                     children: [],
-                    profile_photo: '',
+                    profile_photo: '/images/tin.jpg',
                 },
                 children: [
                     {
