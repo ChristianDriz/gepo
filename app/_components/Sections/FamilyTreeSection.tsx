@@ -20,7 +20,7 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
                         isAlive={parent.isAlive}
                         profile_photo={parent.profile_photo}
                     />
-                    <span className={`w-px h-20 bg-gray-300 relative before:content-[''] before:absolute before:h-px before:w-[153px] before:top-1/2 before:bg-gray-300`}/>
+                    <span className={`w-px h-20 bg-gray-300 relative before:content-[''] before:absolute before:h-px before:w-[156px] before:top-1/2 before:bg-gray-300`}/>
                     {spouse && (
                     <ProfileCard 
                         name={spouse.name}
@@ -48,7 +48,7 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
                         {child.spouse && (
                         <>
                             <span className={`relative w-6 h-px bg-gray-300 ${child.children?.length ? `after:content-[''] after:absolute after:left-1/2 after:w-px after:h-20 after:bg-gray-300 
-                                before:content-[''] before:absolute before:top-20 before:left-3 before:h-px before:w-[284px] before:bg-gray-300` : ""}`}/>
+                                before:content-[''] before:absolute before:top-20 before:left-3 before:h-px before:w-[288px] before:bg-gray-300` : ""}`}/>
                             <ProfileCard 
                                 name={child.spouse.name}
                                 gender={child.spouse.gender}

@@ -74,5 +74,13 @@ export interface FamilyTreeProp {
     familyTree: PersonProp[];
 }
 
-
+// export interface DataProp {
+//     navigation: NavItemProp[];
+//     personalInfo: PersonalInfoProp['personalInfo'];
+//     obituary: ObituaryProp['obituary'];
+//     favorites: FavoriteItem[];
+//     timeline: TimelineProp['timeline'];
+//     galleries: GalleryItemProp[];
+//     familyTree: PersonProp[];
+// }
 

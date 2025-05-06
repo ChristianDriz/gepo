@@ -1,8 +1,11 @@
+"use client"
+
 import { PersonalInfoProp } from "@/lib/interfaces";
 import { Icon } from '@iconify/react';
 import Image from "next/image";
 
 export default function PersonalInfoSection({personalInfo, id } : PersonalInfoProp ) {
+
     return (
         <section className="max-w-7xl mx-auto md:mt-4 " id={id}>
             <div className="h-70 md:h-90 lg:h-110 xl:h-140 md:px-4 ">
@@ -15,7 +18,7 @@ export default function PersonalInfoSection({personalInfo, id } : PersonalInfoPr
                 />
             </div>
             <div className="px-4 -mt-26 md:-mt-32 lg:-mt-38 w-full flex flex-col items-start md:items-center ">
-                <div className='w-40 h-40 md:w-50 md:h-50 lg:w-60 lg:h-60 p-2 bg-[var(--background)] rounded-full '>
+                <div className='w-40 h-40 md:w-50 md:h-50 lg:w-60 lg:h-60 p-2 bg-[var(--background)] rounded-full ' data-aos="zoom-out">
                     <Image 
                         src={personalInfo.profile}
                         alt='Profile Photo'
