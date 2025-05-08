@@ -25,7 +25,7 @@ export default function Loader() {
 
     return (
         <div className="absolute inset-0 flex items-center justify-center bg-[var(--background)] z-10 px-4">
-            <div className="text-center text-[var(--muted-text)] font-bold font-['Cormorant'] italic leading-tight">
+            <div className="text-center text-[var(--foreground)] font-bold font-['Playfair_Display'] italic leading-tight">
                 <motion.h1 className="text-3xl sm:text-5xl">
                     {getLetters(line1)}
                 </motion.h1>

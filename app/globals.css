@@ -8,18 +8,19 @@
     --subtle-background: #FFFFFF;
     --muted-text: #5E5E5E;
     --border-subtle: #EFEFEF;
-    --red: #F87171;
+    --cool-blue: #60A5FA;
+    --cool-red: #F87171;
 }
   
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-        --background: #202021;
+        --background: #1A1D21;
         --foreground: #E2E5E9; 
-        --subtle-background: #2C2D30;
+        --subtle-background: #1C232D;
         --muted-text: #BCBCBC;
         --border-subtle: #373737;
     }
-}
+} */
 
 body {
     background: var(--background);
@@ -31,7 +32,7 @@ html {
 }
 
 h2 {
-    font-family: Cormorant;
+    font-family: Playfair Display;
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 500;
 }

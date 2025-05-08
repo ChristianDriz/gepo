@@ -1,24 +1,16 @@
-"use client"
-
 import { PersonProp } from "@/lib/interfaces";
 import { formatDate, calcAge } from "@/lib/formatDate";
 import Image from "next/image";
-import AOS from "aos";
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+
 
 export default function ProfileCard({ name, gender, birthdate, role, isAlive, profile_photo, } : PersonProp  ) {
-
-    useEffect(() => {
-        AOS.init({});
-    }, []);
 
     // const todate = new Date();
     // const age = todate.toLocaleDateString() - birthdate;
     
     return (
         <article 
-            data-aos="zoom-in"
+            data-aos="zoom-in" data-aos-duration="800"
             className={`relative rounded-lg flex gap-3 bg-[var(--subtle-background)] p-3 
                 ${(role === "child" || role === "grandchild") ? "before:content-[''] before:absolute before:-left-8 before:top-1/2 before:h-px before:w-8 before:bg-gray-300" : ""}`
             }>

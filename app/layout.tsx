@@ -1,20 +1,19 @@
 
 import type { Metadata } from "next";
-import { Cormorant , Quicksand } from 'next/font/google';
+import { Playfair_Display , Work_Sans } from 'next/font/google';
 import { Navigation } from '../lib/constants'
 import "./globals.css";
-import DesktopNav from "./_components/Navigation/DesktopNav";
-import MobileNav from "./_components/Navigation/MobileNav";
+import Navbar from "./_components/Navigation/Navbar";
 import Footer from "./_components/Footer/footer";
 import Wrapper from "./_components/ui/Wrapper";
 
-const cormorant = Cormorant({
-    weight: ['400', '500', '600', '700'], 
+const playfair = Playfair_Display({
+    weight: ['400', '500', '600', '700', '800', '900'], 
     subsets: ['latin'],
     display: 'swap',
 })
 
-const quicksand = Quicksand({
+const work_sans = Work_Sans ({
     weight: ['400', '500', '600', '700'], 
     subsets: ['latin'],
     display: 'swap',
@@ -32,10 +31,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" >
-            <body className={`${cormorant.className} ${quicksand.className} antialiased relative`}>     
+            <body className={`${playfair.className} ${work_sans.className}  antialiased relative`}>     
                 <Wrapper>
-                    <DesktopNav navlinks={Navigation} />
-                    <MobileNav navlinks={Navigation} />
+                    <Navbar navlinks={Navigation} />
                     <main className="relative">{children}</main>
                     <footer className="w-full bg-[var(--subtle-background)]">
                         <Footer />

@@ -8,6 +8,7 @@ export interface PersonalInfoProp {
         birthDate: string;
         deathDate: string;
         placeOfBirth: string;
+        quote: string;
     }
 }
 

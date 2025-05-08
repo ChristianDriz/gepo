@@ -8,7 +8,7 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
 
     return (
         <section id={id} className="max-w-7xl mx-auto my-10 px-3 py-6 md:px-4 ">
-            <h2 className="mb-4 capitalize">{id}</h2>
+            <h2 className="mb-4 capitalize"  data-aos="fade-up" data-aos-duration="800">{id}</h2>
             <div className="flex gap-16 overflow-x-auto overflow-y-hidden relative ">
                 {/* parents */}
                 <div className="flex flex-col items-center justify-center">

@@ -12,8 +12,8 @@ export default function Card({ title, content } : FavoriteItem  ) {
     }, []);    
 
     return (
-        <div className="p-4 rounded-lg bg-[var(--subtle-background)]" data-aos="flip-right" data-aos-duration="500">
-            <h4 className="font-medium text-cyan-500">{title}</h4>
+        <div className="px-5 py-4 rounded-lg bg-[var(--subtle-background)]" data-aos="fade-up" data-aos-duration="1500">
+            <h4 className="font-medium text-[var(--cool-blue)]">{title}</h4>
             <p className="text-[var(--muted-text)]">{content}</p>
         </div>
     )

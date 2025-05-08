@@ -27,11 +27,12 @@ export const Navigation = [
 
 export const PersonalInfo = {
     background: '/images/background_cropped.jpg',
-    profile: '/images/profile.png',
-    name: 'Michael Angelo Driz Dimla',
+    profile: '/images/no-bg-profile.png',
+    name: 'Michael Angelo',
     birthDate: 'October 23, 1989',
     deathDate: 'April 2, 2025',
     placeOfBirth: 'Balanga City, Bataan',
+    quote: '“Forever remembered, deeply missed.”',
 }  
 
 export const Obituary = [
