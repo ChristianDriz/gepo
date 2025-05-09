@@ -1,11 +1,12 @@
 import { FavoritesProp } from "@/lib/interfaces";
 import Card from "../ui/Card";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function FavoriteSection({ favorites, id } : FavoritesProp ) {
     
     return (
-        <section className="max-w-7xl mx-auto px-4 mt-16" id={id}>
-            <h2 className="mb-4 capitalize" data-aos="fade-up" data-aos-duration="800">{id}</h2>
+        <section className="max-w-7xl mx-auto px-4 py-8 " id={id}>
+            <SectionTitle title={id}/>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {favorites.map((favorite, index) => (
                     <li key={index}>

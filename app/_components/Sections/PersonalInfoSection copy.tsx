@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function PersonalInfoSection({personalInfo, id } : PersonalInfoProp ) {
 
     return (
-        <section className="max-w-7xl mx-auto md:mt-4 " id={id}>
+        <section className="max-w-7xl mx-auto md:mt-4 border" id={id}>
             <div className="h-70 md:h-90 lg:h-110 xl:h-140 md:px-4 ">
                 <Image 
                     src={personalInfo.background}

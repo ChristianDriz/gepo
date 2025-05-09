@@ -1,5 +1,6 @@
 import { FamilyTreeProp } from "@/lib/interfaces";
 import ProfileCard from "../ui/ProfileCard";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp ) {
 
@@ -7,8 +8,8 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
     const spouse = parent.spouse;
 
     return (
-        <section id={id} className="max-w-7xl mx-auto my-10 px-3 py-6 md:px-4 ">
-            <h2 className="mb-4 capitalize"  data-aos="fade-up" data-aos-duration="800">{id}</h2>
+        <section id={id} className="max-w-7xl mx-auto px-3 py-8 md:px-4 ">
+            <SectionTitle title={id}/>
             <div className="flex gap-16 overflow-x-auto overflow-y-hidden relative ">
                 {/* parents */}
                 <div className="flex flex-col items-center justify-center">

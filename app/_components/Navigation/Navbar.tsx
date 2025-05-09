@@ -3,24 +3,34 @@
 import { NavigationProp } from "@/lib/interfaces";
 import { FiBarChart2 } from "react-icons/fi";
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 export default function DesktopNav({ navlinks } : NavigationProp ) {
 
     const [isToggle, setToggle] = useState<boolean>(false);
-
     const handleToggle = () => {
         setToggle(!isToggle);
     }
 
     return (
-        <nav className="sticky top-0 z-10 bg-[var(--background)] text-[var(--foreground)] ">
+        <nav className="sticky top-0 z-10 bg-[var(--background)] text-[var(--foreground)]">
             <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-                <Link href={'/'} className="text-xl tracking-widest font-bold uppercase font-['Playfair_Display'] ">Gepo</Link>
-                <ul className="hidden md:flex gap-6 ">
+                <Link to={'/'} className="text-xl tracking-widest font-bold uppercase font-['Playfair_Display'] ">Gepo</Link>
+                <ul className="hidden md:flex  ">
                     {navlinks.map((navlink, index) => (
-                    <li key={index} className="capitalize font-medium">
-                        <Link href={`#${navlink.link}`}>{navlink.link}</Link>
+                    <li key={index} >
+                        <Link 
+                            to={navlink.link}
+                            spy={true}
+                            smooth='easeInOut'
+                            duration={600}
+                            offset={-60}
+                            isDynamic={true}
+                            activeClass='text-[#7D8F69]'
+                            className="capitalize cursor-pointer px-4 py-2 font-medium"
+                        >
+                            {navlink.link}
+                        </Link>
                     </li>
                     ))}     
                 </ul>
@@ -40,7 +50,17 @@ export default function DesktopNav({ navlinks } : NavigationProp ) {
                         <ul className="flex flex-col gap-3 px-2 py-6">
                             {navlinks.map((navlink, index) => (
                             <li key={index} className="capitalize ">
-                                <Link href={`#${navlink.link}`}>{navlink.link}</Link>
+                                <Link 
+                                    to={navlink.link}
+                                    spy={true}
+                                    smooth='easeInOut'
+                                    duration={600}
+                                    offset={-60}
+                                    isDynamic={true}
+                                    activeClass='text-[#7D8F69]'
+                                >
+                                    {navlink.link}
+                                </Link>
                             </li>
                             ))}     
                         </ul>

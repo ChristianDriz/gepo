@@ -1,17 +1,17 @@
 "use client"
 
 import { PersonalInfoProp } from "@/lib/interfaces";
-import { motion } from 'framer-motion'
+import { motion } from "motion/react"
 import Image from "next/image";
 
 export default function PersonalInfoSection({personalInfo, id } : PersonalInfoProp ) {
 
     return (
-        <section className="max-w-7xl mx-auto h-[calc(100dvh-60px)] min-h-full px-4 pb-10 md:pb-0 flex flex-col md:flex-row justify-center " id={id}>
+        <section className="max-w-7xl mx-auto h-[calc(100dvh-60px)] min-h-full px-4 pb-10 md:pb-0 flex flex-col md:flex-row justify-center overflow-hidden" id={id}>
             <motion.div 
                 initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 4.5, ease: "easeInOut" }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 4.3, ease: "easeInOut" }}
                 className="relative min-h-96 w-auto md:order-2 animate-[fade-in 1s]">
                 <Image 
                     src={personalInfo.profile}
@@ -25,8 +25,8 @@ export default function PersonalInfoSection({personalInfo, id } : PersonalInfoPr
             </motion.div>
             <motion.div 
                 initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 4.5, ease: "easeInOut" }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 4.3, ease: "easeInOut" }}
                 className=" max-md:mt-4 text-center max-w-sm md:max-w-full md:flex-1 mx-auto flex flex-col justify-center">
                 <h1 className="font-black text-[clamp(3rem,8vw,8rem)] leading-[clamp(3rem,8vw,8rem)] uppercase font-['Playfair_Display'] text-transparent 
                     bg-clip-text bg-cover bg-right bg-[url(/images/bg-mask.jpg)]" >

@@ -1,20 +1,19 @@
 "use client"
 
 import { FavoriteItem } from "@/lib/interfaces";
-import { useEffect } from "react";
-import AOS from "aos";
-import 'aos/dist/aos.css';
+import { motion } from "motion/react"
 
 export default function Card({ title, content } : FavoriteItem  ) {
 
-    useEffect(() => {
-        AOS.init({});
-    }, []);    
-
     return (
-        <div className="px-5 py-4 rounded-lg bg-[var(--subtle-background)]" data-aos="fade-up" data-aos-duration="1500">
-            <h4 className="font-medium text-[var(--cool-blue)]">{title}</h4>
-            <p className="text-[var(--muted-text)]">{content}</p>
-        </div>
+        <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, transition: "easeOut" }}
+            className="px-6 py-5 rounded-lg bg-[var(--subtle-background)]" 
+        >
+            <h4 className="font-medium text-[var(--foreground)] mb-1">{title}</h4>
+            <p className="text-[var(--muted-text)] text-sm">{content}</p>
+        </motion.div>
     )
 }

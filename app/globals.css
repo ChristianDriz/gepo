@@ -27,9 +27,9 @@ body {
     color: var(--foreground);
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 h2 {
     font-family: Playfair Display;
