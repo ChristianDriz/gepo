@@ -12,7 +12,7 @@ export async function getData(): Promise<GalleryProp> {
         query MyQuery {
             galleries {
                 category
-                images {
+                medias(first: 1000) {
                     url
                 }
             }

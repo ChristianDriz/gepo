@@ -45,32 +45,65 @@ export const Obituary = [
     A talented basketball player, Michael’s passion for the game was matched only by his love for reggae music — a true reflection of his free spirit and love for life. His warmth, kindness, and joy will live on in every shared story and memory.`
 ]
 
-export const Favorites = [
-    {
-        title: "What was Angelo's favorite Saying?",
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-    },
-    {
-        title: "What was Angelo's favorite Saying?",
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-    },
-    {
-        title: "What was Angelo's favorite Saying?",
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-    },
-    {
-        title: "What was Angelo's favorite Saying?",
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-    },
-    {
-        title: "What was Angelo's favorite Saying?",
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-    },
-    {
-        title: "What was Angelo's favorite Saying?",
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-    },
-]
+export const Favorites = {
+    food: [
+        { 
+            name: 'Nilagang Baboy', 
+            description: 'A comforting Filipino dish made with pork or beef and vegetables.',
+            image: '/images/nilaga.jpg' 
+        },
+        { 
+            name: 'Tahong', 
+            description: 'Delicious mussels cooked in a savory broth.',
+            image: '/images/tahong.jpg' 
+        },
+        { 
+            name: 'Menudo', 
+            description: 'A savory stew of pork, liver, potatoes, and carrots.',
+            image: '/images/menudo.jpg' 
+        },            
+    ],
+    music: [
+        { 
+            name: 'Boom Shack-A-Lak', 
+            description: 'Michael Angelo’s favorite song and he sings in videoke when he’s drunk.',
+            artist: 'Apache Indian',
+            src: 'music/Boom Shack-A-Lak - Apache Indian.mp3',
+            cover: '/music/Boom Shack-A-Lak - Apache Indian.jpg'
+        },
+        { 
+            name: 'Once in a Lifetime', 
+            description: 'Michael Angelo’s favorite love song.',
+            artist: 'Freestyle',
+            src: '/music/Once In A Lifetime - Freestyle.mp3',
+            cover: '/music/Once In A Lifetime - Freestyle.jpg'
+        },
+        { 
+            name: 'Welcome to Jamrock', 
+            description: 'Michael Angelo’s favorite reggae song that he loved to play in speakers.',
+            artist: 'Damian Marley',
+            src: '/music/Welcome To Jamrock - Damian Marley.mp3',
+            cover: '/music/Welcome To Jamrock - Damian Marley.jpg'
+        },            
+    ],
+    style: [
+        { 
+            name: 'Tambay Cap', 
+            description: `Michael Angelo’s signature style, a cap that reflects his personality.`,
+            image: '/images/tambay-cap.jpg' 
+        },
+        { 
+            name: 'Chris Brown Shirt', 
+            description: 'Michael Angelo’s favorite shirt had Chris Brown on it. He wore it often and proudly.',
+            image: '/images/tshirt.jpg' 
+        },         
+        { 
+            name: 'Camouflage Pants', 
+            description: 'Michael Angelo’s favorite pants—worn almost every day. Comfortable, cool, and totally his style.',
+            image: '/images/camouflage.webp' 
+        }      
+    ]
+}
 
 export const Timeline = [
     {
@@ -80,10 +113,10 @@ export const Timeline = [
         description: `On this day, Michael Angelo 'Gepo' was born and brought joy to our family. A new journey began.`,
     },
     {
-        date: 'October 23, 1989',
+        date: 'April 28, 1990',
         icon: 'healthicons:death-alt2-outline' ,
-        title: 'Birth in Balanga',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        title: 'Baptism Day',
+        description: `Michael Angelo was baptized on this day in Balanga. Surrounded by loved ones, he was welcomed into the Christian faith—a moment of grace and celebration for the family.`,
     },
     {
         date: 'April 08, 2002',
@@ -279,7 +312,7 @@ export const FamilyTree = [
                     name: 'Kherlinn B. Almirañez',
                     gender: 'female',
                     role: 'spouse',
-                    birthdate: '1997-05-31',
+                    birthdate: '1997-05-29',
                     deathdate: '',
                     isAlive: true,
                     spouse: undefined,

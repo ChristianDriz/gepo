@@ -8,7 +8,7 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
     const spouse = parent.spouse;
 
     return (
-        <section id={id} className="max-w-7xl mx-auto px-3 py-8 md:px-4 ">
+        <section id={id} className="max-w-7xl mx-auto px-3 pt-8 pb-40 md:px-4 ">
             <SectionTitle title={id}/>
             <div className="flex gap-16 overflow-x-auto overflow-y-hidden relative ">
                 {/* parents */}

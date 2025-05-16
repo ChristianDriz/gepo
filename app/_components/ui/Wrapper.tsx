@@ -19,16 +19,16 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         }
     }, [])
 
-  return (
-    <div className="relative">
-        {loading && (
-            <div className="fixed inset-0 z-50 bg-white flex items-center justify-center">
-                <Loader />
+    return (
+        <div className="relative">
+            {loading && (
+                <div className="fixed inset-0 z-50 bg-white flex items-center justify-center">
+                    <Loader />
+                </div>
+            )}
+            <div className={`${loading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-700`}>
+                {children}
             </div>
-        )}
-        <div className={`${loading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-700`}>
-            {children}
         </div>
-    </div>
-  )
+    )
 }

@@ -20,9 +20,26 @@ const work_sans = Work_Sans ({
 })
 
 export const metadata: Metadata = {
-    title: "GEPO",
-    description: "In memories of Michael Angelo (Gepo)",
-};
+    title: 'GEPO',
+    description: `In Loving Memory of Michael Angelo. A tribute to a life well lived.`,
+    // icons: { icon: "/MovieDrixLogo.png" },
+    metadataBase: new URL('https://michaelangelodrizdimla.vercel.app'),
+    creator: "Christian Joseph Driz Dimla",
+    openGraph: {
+        title: 'GEPO',
+        url: 'https://michaelangelodrizdimla.vercel.app',
+        description: `In Loving Memory of Michael Angelo. A tribute to a life well lived.`,
+        type: 'website',
+        images: [
+            {
+                url: '/images/background.jpg',
+                width: 800,
+                height: 800,
+                alt: "GEPO",
+            },
+        ],
+    },
+}
 
 export default function RootLayout({
     children,
@@ -31,7 +48,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" >
-            <body className={`${playfair.className} ${work_sans.className}  antialiased relative`}>     
+            <body className={`${playfair.className} ${work_sans.className} antialiased relative`}>     
                 <Wrapper>
                     <Navbar navlinks={Navigation} />
                     <main className="relative">{children}</main>

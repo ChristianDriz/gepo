@@ -27,12 +27,4 @@ body {
     color: var(--foreground);
 }
 
-/* html {
-    scroll-behavior: smooth;
-} */
 
-h2 {
-    font-family: Playfair Display;
-    font-size: 1.5em;
-    font-weight: 500;
-}

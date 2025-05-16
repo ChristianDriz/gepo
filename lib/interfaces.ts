@@ -27,13 +27,21 @@ export interface ObituaryProp {
 }
 
 export interface FavoriteItem {
-    title: string;
-    content: string;
+    type?: string;
+    name: string;
+    description: string;
+    image?: string;
+    artist?: string;
+    src?: string;
+    cover?: string;
 }
 
 export interface FavoritesProp {
     id: string;
-    favorites: FavoriteItem[];
+    favorites:{
+        food: FavoriteItem[];
+        music: FavoriteItem[];
+    };
 }
 
 export interface TimelineProp {
@@ -48,7 +56,7 @@ export interface TimelineProp {
 
 export interface GalleryItemProp {
     category: string;
-    images: {
+    medias: {
         url: string;
     }[]
 }

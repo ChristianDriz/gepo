@@ -8,6 +8,7 @@ import TimelineSection from './_components/Sections/TimelineSection';
 import GallerySection from './_components/Sections/GallerySection';
 import FamilyTreeSection from './_components/Sections/FamilyTreeSection';
 
+export const revalidate = 0;
 
 export default async function Home() {
     
