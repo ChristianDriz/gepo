@@ -11,7 +11,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         const timer = setTimeout(() => {
             setLoading(false)
             document.body.classList.remove('overflow-hidden')
-        }, 4300)
+        }, 0)
 
         return () => {
             clearTimeout(timer)

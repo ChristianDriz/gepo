@@ -58,6 +58,7 @@ export interface GalleryItemProp {
     category: string;
     medias: {
         url: string;
+        mimeType: string;
     }[]
 }
 

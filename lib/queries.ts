@@ -14,6 +14,7 @@ export async function getData(): Promise<GalleryProp> {
                 category
                 medias(first: 1000) {
                     url
+                    mimeType
                 }
             }
         }`;

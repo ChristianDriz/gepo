@@ -90,10 +90,10 @@ export default function MusicPlayer({ title, description, artist, cover, src } :
                         max={duration}
                         value={progress}
                         onChange={onSeek}
-                        className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-xs accent-[var(--cool-blue)]"
+                        className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer range-xs accent-[var(--cool-blue)] focus:outline-none"
                     />
                     <span>{formatTime(duration)}</span>   
-                    <button onClick={togglePlay} className="cursor-pointer text-[var(--cool-blue)] hover:text-[var(--text)] transition-all duration-200"> 
+                    <button onClick={togglePlay} className="cursor-pointer text-[var(--cool-blue)] hover:text-[var(--text)] transition-all duration-200 focus:outline-none"> 
                         <Icon icon={`${isPlaying ? 'fe:pause' : 'fe:play' }`} className="h-6 w-6 "/>
                     </button>    
                 </div>

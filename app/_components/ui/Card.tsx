@@ -34,7 +34,7 @@ export default function Card({ type, name, description, image, artist, src, cove
                     />
                 </div>
                 <div className="flex-1 ">
-                    <h4 className="font-medium mb-1 text-[var(--foreground)]">{name}</h4>
+                    <h4 className="font-medium mb-1 text-[var(--foreground)]">{name}</h4> 
                     <p className="text-[var(--muted-text)] leading-5">{description}</p>
                 </div>
   
