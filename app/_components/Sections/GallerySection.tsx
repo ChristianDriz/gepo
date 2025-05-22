@@ -2,12 +2,9 @@
 
 import { GalleryProp } from "@/lib/interfaces";
 import { useState } from "react";
-// import { PhotoProvider, PhotoView } from "react-photo-view";
 import { motion } from "motion/react"
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-import 'react-photo-view/dist/react-photo-view.css';
-// import Image from "next/image";
 import SectionTitle from "../ui/SectionTitle";
 import MediaViewer from "../ui/MediaViewer";
 
@@ -66,7 +63,6 @@ export default function GallerySection({ galleries, id } : GalleryProp ) {
                 </ul>
             </motion.div>
 
-           
             <div className="columns-2 md:columns-4 gap-3 ">
                 {slicedMedias.map(({ url, type },  index) => (            
                     <MediaViewer 
@@ -78,28 +74,7 @@ export default function GallerySection({ galleries, id } : GalleryProp ) {
                     />      
                 ))}
             </div>
-            
 
-            {/* <PhotoProvider>
-                <div className="columns-2 md:columns-4 gap-3 ">
-                    {medias.slice(0, slicedImages).map((url, index) => (
-                    <PhotoView key={url} src={url}>
-                        <MotionImage 
-                            src={url}
-                            alt={`img-${index}`}
-                            width={450}
-                            height={450}
-                            className="h-full rounded-md object-cover mb-3 cursor-pointer"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, transition: "easeOut" }}
-                        />
-                    </PhotoView>
-                    ))}
-                </div>
-            </PhotoProvider> */}
-           
-            
             {slicedImages < medias.length && (
                 <motion.div 
                     initial={{ opacity: 0, y: 80 }}

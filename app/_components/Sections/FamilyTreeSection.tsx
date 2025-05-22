@@ -8,7 +8,7 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
     const spouse = parent.spouse;
 
     return (
-        <section id={id} className="max-w-7xl mx-auto px-3 pt-8 pb-40 md:px-4 ">
+        <section id={id} className="max-w-7xl mx-auto pt-8 pb-40 px-3 md:px-4 ">
             <SectionTitle title={id}/>
             <div className="flex gap-16 overflow-x-auto overflow-y-hidden relative ">
                 {/* parents */}
@@ -34,7 +34,7 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
                     )}              
                 </div>
                 {/* child and spouse */}
-                <div className="flex flex-col justify-center gap-14 relative before:content-[''] before:absolute before:-left-8 before:h-[calc(100%-104px)] before:w-px before:bg-gray-300">
+                <div className="flex flex-col justify-center gap-9 relative before:content-[''] before:absolute before:-left-8 before:h-[calc(100%-96px)] before:w-px before:bg-gray-300">
                     {parent.children?.map((child, index) => (     
                     <div className="flex items-center" key={index} >
                         <ProfileCard 
@@ -48,8 +48,8 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
                         
                         {child.spouse && (
                         <>
-                            <span className={`relative w-6 h-px bg-gray-300 ${child.children?.length ? `after:content-[''] after:absolute after:left-1/2 after:w-px after:h-20 after:bg-gray-300 
-                                before:content-[''] before:absolute before:top-20 before:left-3 before:h-px before:w-[288px] before:bg-gray-300` : ""}`}/>
+                            <span className={`relative w-6 h-px bg-gray-300 ${child.children?.length ? `after:content-[''] after:absolute after:left-1/2 after:w-px after:h-16.5 after:bg-gray-300 
+                                before:content-[''] before:absolute before:top-16.5 before:left-3 before:h-px before:w-[280px] before:bg-gray-300` : ""}`}/>
                             <ProfileCard 
                                 name={child.spouse.name}
                                 gender={child.spouse.gender}
@@ -65,9 +65,9 @@ export default function FamilyTreeSection({ familyTree, id } :  FamilyTreeProp )
                 ))}
                 </div>
                 {/* grandchildren */}     
-                <div className="flex flex-col gap-4 ">
+                <div className="flex flex-col gap-2 ">
                 {parent.children?.map((child, index) => (
-                    <div key={index} className="flex flex-col gap-4 relative before:content-[''] before:absolute before:-left-8 before:h-[calc(100%-104px)] before:w-px before:mt-13 before:bg-gray-300">      
+                    <div key={index} className="flex flex-col gap-2 relative before:content-[''] before:absolute before:-left-8 before:h-[calc(100%-96px)] before:w-px before:mt-12 before:bg-gray-300">      
                     {child.children?.map((grandchild, i) => (
                         <ProfileCard
                             key={`${index}-${i}`} 
